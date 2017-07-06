@@ -1,0 +1,93 @@
+$rw-font-path: '~react-widgets/lib/fonts';
+$rw-img-path:  '~react-widgets/lib/img';
+
+@import 'panel.scss';
+
+.fixed {
+  position: fixed;
+}
+
+
+table {
+  border: 1px solid #efefef;
+  width: 100%;
+  font-size: 14px;
+  text-align: right;
+  thead tr {
+    background: #ddd;
+  }
+  tbody {
+    tr:nth-child(odd) {
+      background: #efefef;
+    }
+    td {
+      padding: .5em;
+    }
+  }
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  padding: 0;
+  background: #efefef;
+}
+
+// * {
+//   box-sizing: border-box;
+//   transition: .5s;
+// }
+
+p {
+  line-height: 1.5em;
+}
+
+h1 {
+  font-weight: normal;
+}
+
+.site {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.wrap {
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 1em;
+}
+
+.highchart {
+  padding: 2em;
+  margin: 1em;
+  border: 1px solid #efefef;
+}
+
+.rw-widget {
+  display: inline-block;
+  border-radius: 0;
+
+  .rw-popup {
+    box-shadow: none;
+  }
+
+  .rw-popup-container {
+    width: 200px;
+  }
+  .rw-i {
+    line-height: 2em;
+  }
+}
+
+.App {
+  background: #fff;
+}
+
+.site-header {
+  background: #efefef;
+  height: 100px;
+  width: 100%;
+  display: block;
+}
