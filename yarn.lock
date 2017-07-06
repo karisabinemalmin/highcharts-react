@@ -526,8 +526,8 @@ babel-plugin-transform-flow-strip-types@^6.22.0:
     babel-runtime "^6.22.0"
 
 babel-plugin-transform-react-display-name@^6.23.0:
-  version "6.23.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-transform-react-display-name/-/babel-plugin-transform-react-display-name-6.23.0.tgz#4398910c358441dc4cef18787264d0412ed36b37"
+  version "6.25.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-transform-react-display-name/-/babel-plugin-transform-react-display-name-6.25.0.tgz#67e2bf1f1e9c93ab08db96792e05392bf2cc28d1"
   dependencies:
     babel-runtime "^6.22.0"
 
