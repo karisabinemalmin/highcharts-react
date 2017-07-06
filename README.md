@@ -1,1 +1,1 @@
-# highcharts-react-axios
+# highcharts-react
