@@ -8,6 +8,11 @@ $rw-img-path:  '~react-widgets/lib/img';
 }
 
 
+.highcharts-title,
+table caption {
+  opacity: 0;
+}
+
 table {
   border: 1px solid #efefef;
   width: 100%;
