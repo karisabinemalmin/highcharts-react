@@ -50,15 +50,6 @@ export default class Charts extends React.Component {
       '#574319'
     ]
 
-    const plotOptions = {
-      series: {
-        borderWidth: 0,
-        dataLabels: {
-          enabled: false
-        }
-      }
-    }
-
     const newDrilldown = []
     const drilldown = update(newDrilldown, {
       $push: this.state.items.map((item) => ({'id': item.id, 'data': item.data}))
@@ -87,10 +78,15 @@ export default class Charts extends React.Component {
         type: 'category'
       },
       legend: {
-        enabled: false
+        enabled: true
+      },
+      tooltip: {
+        shadow: false,
+        borderWidth: 5
       },
       plotOptions: {
         series: {
+          animation: false,
           borderWidth: 0,
           dataLabels: {
             enabled: true
@@ -136,15 +132,16 @@ export default class Charts extends React.Component {
     return (
       <div className="highchart">
 
-        <h2>{this.props.title}</h2>
+        <div style={{'position': 'relative'}}>
+          <h2>{this.props.title}</h2>
 
-        <label><input type="radio" name={this.props.title + '_visning'} value="figur" checked="true" onChange={this.handleVisning.bind(this)} checked={this.state.selectedVisning === 'figur'}/>
-          Figur</label>
-        <label><input type="radio" name={this.props.title + '_visning'} value="tabell" onChange={this.handleVisning.bind(this)} checked={this.state.selectedVisning === 'tabell'}/>
-          Tabell</label>
-
-        <DropdownList onChange={this.dropdownChange.bind(this)} defaultValue={this.state.selectedType} data={colors}/>
-        <Panel title={this.props.title} datagrunnlag={this.props.datagrunnlag} selectedPanel={this.props.selectedPanel} handleSlide={this.props.handleSlide.bind(this)}/>
+          <label><input type="radio" name={this.props.title + '_visning'} value="figur" checked="true" onChange={this.handleVisning.bind(this)} checked={this.state.selectedVisning === 'figur'}/>
+            Figur</label>
+          <label><input type="radio" name={this.props.title + '_visning'} value="tabell" onChange={this.handleVisning.bind(this)} checked={this.state.selectedVisning === 'tabell'}/>
+            Tabell</label>
+          <DropdownList onChange={this.dropdownChange.bind(this)} defaultValue={this.state.selectedType} data={colors}/>
+          <Panel title={this.props.title} datagrunnlag={this.props.datagrunnlag} selectedPanel={this.props.selectedPanel} handleSlide={this.props.handleSlide.bind(this)}/>
+        </div>
 
         <div>
 

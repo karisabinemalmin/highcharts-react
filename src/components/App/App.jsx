@@ -180,6 +180,47 @@ export default class App extends React.Component {
             }
           ]
         }
+      ],
+      data3: [
+        // {
+        //   name: 'Animals',
+        //   y: 5,
+        //   id: 'animals',
+        //   data: [
+            {
+              name: 'Cats',
+              y: 4
+            }, {
+              name: 'Dogs',
+              y: 2
+            }, {
+              name: 'Cows',
+              y: 1
+            }, {
+              name: 'Sheep',
+              y: 2
+            }, {
+              name: 'Pigs',
+              y: 1
+            }
+        //   ]
+        // }, {
+        //   name: 'Cars',
+        //   y: 4,
+        //   id: 'cars',
+        //   data: [
+        //     {
+        //       name: 'Toyota',
+        //       y: 4
+        //     }, {
+        //       name: 'Opel',
+        //       y: 2
+        //     }, {
+        //       name: 'Volkswagen',
+        //       y: 2
+        //     }
+        //   ]
+        // }
       ]
     };
   }
@@ -227,6 +268,19 @@ export default class App extends React.Component {
           handleSlide={this.handleSlide.bind(this)}
           datagrunnlag="Chew on cable meow meow, i tell my human licks paws yet missing until dinner time, mark territory. Stare out the window spit up on light gray carpet instead of adjacent linoleum for mesmerizing birds for poop on grasses all of a sudden cat goes crazy give me attention or face the wrath of my claws. Jump off balcony, onto stranger's head why must they do that, but annoy owner until he gives you food say meow repeatedly until belly rubs, feels good scream at teh bath. Meow meow. Caticus cuteicus why must they do that chase after silly colored fish toys around the house purrrrrr. Rub whiskers on bare skin act innocent burrow under covers i cry and cry and cry unless you pet me, and then maybe i cry just for fun lick the plastic bag and hack up furballs for white cat sleeps on a black shirt. Scratch the box lick sellotape poop in litter box, scratch the walls. Kitten is playing with dead mouse. Kitten is playing with dead mouse annoy kitten brother with poking so give attitude paw at your fat belly or my slave human didn't give me any food so i pooped on the floor step on your keyboard while you're gaming and then turn in a circle . Lick the other cats throw down all the stuff in the kitchen or find something else more interesting. Destroy the blinds chase mice lay on arms while you're using the keyboard. Mrow asdflkjaertvlkjasntvkjn (sits on keyboard). Wack the mini furry mouse eats owners hair then claws head so knock dish off table head butt cant eat out of my own dish so howl on top of tall thing eat a plant, kill a hand. Chase the pig around the house. Why must they do that steal the warm chair right after you get up but knock dish off table head butt cant eat out of my own dish meowzer so cough hairball on conveniently placed pants steal the warm chair right after you get up eat grass, throw it back up. Damn that dog sleep nap destroy the blinds for soft kitty warm kitty little ball of furr, eat grass, throw it back up or my slave human didn't give me any food so i pooped on the floor. Love to play with owner's hair tie cat is love, cat is life inspect anything brought into the house ask for petting or lick butt and make a weird face, yet touch water with paw then recoil in horror. Kick up litter have secret plans, or wack the mini furry mouse or see owner, run in terror so jump launch to pounce upon little yarn mouse, bare fangs at toy run hide in litter box until treats are fed sniff sniff. Loves cheeseburgers demand to be let outside at once, and expect owner to wait for me as i think about it hide when guests come over loves cheeseburgers so attack dog, run away and pretend to be victim scratch at fleas, meow until belly rubs, hide behind curtain when vacuum cleaner is on scratch strangers and poo on owners food."
         />
+
+
+        <Chart
+          title="Statistikk3"
+          stacking="true"
+          dataName="Comments"
+          dataName2="Scores"
+          type="bar" // pie, bar, column, line
+          data={this.state.data3}
+          handleSlide={this.handleSlide.bind(this)}
+          datagrunnlag="Chew on cable meow meow, i tell my human licks paws yet missing until dinner time, mark territory. Stare out the window spit up on light gray carpet instead of adjacent linoleum for mesmerizing birds for poop on grasses all of a sudden cat goes crazy give me attention or face the wrath of my claws. Jump off balcony, onto stranger's head why must they do that, but annoy owner until he gives you food say meow repeatedly until belly rubs, feels good scream at teh bath. Meow meow. Caticus cuteicus why must they do that chase after silly colored fish toys around the house purrrrrr. Rub whiskers on bare skin act innocent burrow under covers i cry and cry and cry unless you pet me, and then maybe i cry just for fun lick the plastic bag and hack up furballs for white cat sleeps on a black shirt. Scratch the box lick sellotape poop in litter box, scratch the walls. Kitten is playing with dead mouse. Kitten is playing with dead mouse annoy kitten brother with poking so give attitude paw at your fat belly or my slave human didn't give me any food so i pooped on the floor step on your keyboard while you're gaming and then turn in a circle . Lick the other cats throw down all the stuff in the kitchen or find something else more interesting. Destroy the blinds chase mice lay on arms while you're using the keyboard. Mrow asdflkjaertvlkjasntvkjn (sits on keyboard). Wack the mini furry mouse eats owners hair then claws head so knock dish off table head butt cant eat out of my own dish so howl on top of tall thing eat a plant, kill a hand. Chase the pig around the house. Why must they do that steal the warm chair right after you get up but knock dish off table head butt cant eat out of my own dish meowzer so cough hairball on conveniently placed pants steal the warm chair right after you get up eat grass, throw it back up. Damn that dog sleep nap destroy the blinds for soft kitty warm kitty little ball of furr, eat grass, throw it back up or my slave human didn't give me any food so i pooped on the floor. Love to play with owner's hair tie cat is love, cat is life inspect anything brought into the house ask for petting or lick butt and make a weird face, yet touch water with paw then recoil in horror. Kick up litter have secret plans, or wack the mini furry mouse or see owner, run in terror so jump launch to pounce upon little yarn mouse, bare fangs at toy run hide in litter box until treats are fed sniff sniff. Loves cheeseburgers demand to be let outside at once, and expect owner to wait for me as i think about it hide when guests come over loves cheeseburgers so attack dog, run away and pretend to be victim scratch at fleas, meow until belly rubs, hide behind curtain when vacuum cleaner is on scratch strangers and poo on owners food."
+        />
+
       </div>
     );
   }
