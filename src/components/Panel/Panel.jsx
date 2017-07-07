@@ -28,7 +28,8 @@ export default class Panel extends React.Component {
              name="datagrunnlag"
              type="checkbox"
              checked={this.state.selected}
-           /> Datagrunnlag
+             style={{"opacity": "0", "position": "absolute"}}
+           /> Vis datagrunnlag
          </label>
 
         <div className={this.state.selected

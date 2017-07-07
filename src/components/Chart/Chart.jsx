@@ -66,19 +66,44 @@ export default class Charts extends React.Component {
       }))
     })
 
+    const newxAxis = []
+    const xAxis = update(newxAxis, {
+      $push: this.state.items.map((item) => (
+        item.name
+      ))
+    })
+
+    console.log(xAxis);
+
+
     new Highcharts.chart(this.props.title, {
       colors: colors,
       chart: {
-        type: 'column'
+        type: this.props.type,
+        style: {
+          fontFamily: 'Roboto'
+        }
       },
       title: {
         text: this.props.title
       },
       xAxis: {
-        type: 'category'
+        type: 'category',
+        labels: {
+          style: {
+            color: '#333',
+            fontSize: '16px'
+          }
+        }
       },
       legend: {
-        enabled: true
+        itemStyle: {
+          fontSize: '16px'
+        },
+        enabled: true,
+        enabled: true,
+        align: 'center',
+        verticalAlign: 'top',
       },
       tooltip: {
         shadow: false,
@@ -100,13 +125,16 @@ export default class Charts extends React.Component {
           data: series
         }
       ],
-      drilldown: {
+      drilldown:
+      {
         series: drilldown
       }
     })
   }
 
   render() {
+
+    // console.log(this.state.items);
 
     const tabell = this.state.items.map((item) => <tbody>
       <tr>
@@ -135,10 +163,14 @@ export default class Charts extends React.Component {
         <div style={{'position': 'relative'}}>
           <h2>{this.props.title}</h2>
 
+          <div className="visning">
           <label><input type="radio" name={this.props.title + '_visning'} value="figur" checked="true" onChange={this.handleVisning.bind(this)} checked={this.state.selectedVisning === 'figur'}/>
-            Figur</label>
+            <span>Figur</span>
+          </label>
           <label><input type="radio" name={this.props.title + '_visning'} value="tabell" onChange={this.handleVisning.bind(this)} checked={this.state.selectedVisning === 'tabell'}/>
-            Tabell</label>
+            <span>Tabell</span>
+          </label>
+          </div>
           <DropdownList onChange={this.dropdownChange.bind(this)} defaultValue={this.state.selectedType} data={colors}/>
           <Panel title={this.props.title} datagrunnlag={this.props.datagrunnlag} selectedPanel={this.props.selectedPanel} handleSlide={this.props.handleSlide.bind(this)}/>
         </div>

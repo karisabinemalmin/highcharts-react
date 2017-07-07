@@ -1,0 +1,23 @@
+.highcharts-graph {
+  background: orange;
+}
+
+.visning {
+  margin-right: 1em;
+  display: inline-block;
+  vertical-align: top;
+  line-height: 2.5em;
+  label {
+    margin-right: 1em;
+    input {
+      opacity: 0;
+      position: absolute;
+    }
+    input + span {
+      opacity: .4;
+    }
+    input:checked + span {
+      opacity: 1;
+    }
+  }
+}

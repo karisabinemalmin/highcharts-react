@@ -2,6 +2,9 @@ $rw-font-path: '~react-widgets/lib/fonts';
 $rw-img-path:  '~react-widgets/lib/img';
 
 @import 'panel.scss';
+@import 'highcharts.scss';
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 
 .fixed {
   position: fixed;
@@ -13,7 +16,7 @@ table caption {
 }
 
 table {
-  border: 1px solid #efefef;
+  border: 1px solid #ddd;
   width: 100%;
   font-size: 14px;
   text-align: right;
@@ -32,7 +35,7 @@ table {
 
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: "Roboto", sans-serif;
   padding: 0;
   background: #efefef;
 }
